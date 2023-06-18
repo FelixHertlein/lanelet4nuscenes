@@ -16,7 +16,6 @@ If you use the code of our paper for scientific research, please consider citing
     year      = {2023},
     pages     = {3247-3256}
 }
-}
 ```
 
 ## Credits
