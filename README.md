@@ -8,7 +8,7 @@ our [paper](https://openaccess.thecvf.com/content/CVPR2023W/E2EAD/html/Naumann_L
 If you use the code of our paper for scientific research, please consider citing
 
 ```latex
-@InProceedings{Naumann_2023_CVPR,
+@InProceedings{naumannHertleinLanelet2NuScenes,
     author    = {Naumann, Alexander and Hertlein, Felix and Grimm, Daniel and Zipfl, Maximilian and Thoma, Steffen and Rettinger, Achim and Halilaj, Lavdim and Luettin, Juergen and Schmid, Stefan and Caesar, Holger},
     title     = {Lanelet2 for nuScenes: Enabling Spatial Semantic Relationships and Diverse Map-Based Anchor Paths},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
@@ -16,8 +16,10 @@ If you use the code of our paper for scientific research, please consider citing
     year      = {2023},
     pages     = {3247-3256}
 }
+}
 ```
 
 ## Credits
 
 This websites uses the [NeRFies](https://nerfies.github.io) website as template ([CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) License).
+

@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="description"
-        content="CVPRW '23: Lanelet2 for nuScenes: Enabling Spatial Semantic Relationships and Diverse Map-based Anchor Paths" />
-    <meta name="keywords" content="Scrape, Cut, Paste and Learn" />
+    <meta
+      name="description"
+      content="CVPRW '23:  Inv3D: a high-resolution 3D invoice dataset for template-guided single-image document unwarping"
+    />
+    <meta name="keywords" content="Lanelet2, nuScenes, anchor generation" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-        Lanelet2 for nuScenes: Enabling Spatial Semantic Relationships and Diverse Map-based Anchor Paths
+      Lanelet2 for nuScenes: Enabling Spatial Semantic Relationships and Diverse
+      Map-based Anchor Paths
     </title>
 
-    <link rel="stylesheet" href="./static/css/bootstrap-icons/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="./static/fonts/fontawesome/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./static/fonts/fontawesome/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./static/fonts/fontawesome/css/solid.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./static/css/bulma.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
@@ -24,159 +39,632 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <section class="hero">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered">
-                    <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Lanelet2 for nuScenes</h1>
-                        <h1 class="title is-2 publication-title">
-                            Enabling Spatial Semantic Relationships and Diverse Map-based Anchor Paths
-                        </h1>
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Lanelet2 for nuScenes
+              </h1>
+              <h1 class="title is-2 publication-title">
+                Enabling Spatial Semantic Relationships and Diverse Map-based
+                Anchor Paths
+              </h1>
 
-                        <div class="is-size-5 publication-authors">
-                            <span class="author-block">
-                                <a href="https://a-nau.github.io">Alexander Naumann</a><sup>1<b>*</b></sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://www.fzi.de/team/felix-hertlein/">Felix
-                                    Hertlein</a><sup>1<b>*</b></sup>,
-                            </span>
-                            <span class="author-block">
-                                Daniel Grimm
-                                <sup>1</sup>,
-                            </span>
-                            <span class="author-block">
-                                Maximilian Zipfl
-                                <sup>1</sup>,
-                            </span>
-                            <span class="author-block">
-                                Steffen Thoma
-                                <sup>1</sup>,
-                            </span>
-                            <span class="author-block">
-                                Achim Rettinger
-                                <sup>2</sup>,
-                            </span>
-                            <span class="author-block">
-                                Lavdim Halilaj
-                                <sup>3</sup>,
-                            </span>
-                            <span class="author-block">
-                                Juergen Luettin
-                                <sup>3</sup>,
-                            </span>
-                            <span class="author-block">
-                                Stefan Schmid
-                                <sup>3</sup>,
-                            </span>
-                            <span class="author-block">
-                                Holger Caesar
-                                <sup>4</sup>
-                            </span>
-                        </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://a-nau.github.io" target="_blank"
+                    >Alexander Naumann</a
+                  ><sup>1<b>*</b></sup
+                  >,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://www.fzi.de/team/felix-hertlein/"
+                    target="_blank"
+                    >Felix Hertlein</a
+                  ><sup>1<b>*</b></sup
+                  >,
+                </span>
+                <span class="author-block">
+                  Daniel Grimm
+                  <sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Maximilian Zipfl
+                  <sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Steffen Thoma
+                  <sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Achim Rettinger
+                  <sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  Lavdim Halilaj
+                  <sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  Juergen Luettin
+                  <sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  Stefan Schmid
+                  <sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  Holger Caesar
+                  <sup>4</sup>
+                </span>
+              </div>
 
-                    <div class="is-size-6 publication-authors">
-                        <span class="author-block"><sup>*</sup>&nbsp;Authors contributed equally</span><br>
-                        <span class="author-block"><sup>1</sup>&nbsp;FZI Research Center for Information Technology, Karlsruhe, Germany</span>
-                        <span class="author-block"><sup>2</sup>&nbsp;Trier University, Trier, Germany</span>
-                        <span class="author-block"><sup>3</sup>&nbsp;Bosch Corporate Research, Renningen, Germany</span>
-                        <span class="author-block"><sup>4</sup>&nbsp;Delft University of Technology, Delft, Netherlands</span>
-                    </div>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"
+                  ><sup>*</sup>&nbsp;Authors contributed equally</span
+                ><br />
+                <span class="author-block"
+                  ><sup>1</sup>&nbsp;FZI Research Center for Information
+                  Technology, Karlsruhe, Germany</span
+                >
+                <span class="author-block"
+                  ><sup>2</sup>&nbsp;Trier University, Trier, Germany</span
+                >
+                <span class="author-block"
+                  ><sup>3</sup>&nbsp;Bosch Corporate Research, Renningen,
+                  Germany</span
+                >
+                <span class="author-block"
+                  ><sup>4</sup>&nbsp;Delft University of Technology, Delft,
+                  Netherlands</span
+                >
+              </div>
 
-                        <div class="column has-text-centered">
-                            <div class="publication-links">
-                                <!-- PDF Link. -->
-                                <span class="link-block">
-                                    <a href="https://openaccess.thecvf.com/content/CVPR2023W/E2EAD/html/Naumann_Lanelet2_for_nuScenes_Enabling_Spatial_Semantic_Relationships_and_Diverse_Map-Based_CVPRW_2023_paper.html"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="bi bi-file-text"></i>
-                                        </span>
-                                        <span>Paper</span>
-                                    </a>
-                                </span>
-                                <!-- Code Link. -->
-                                <span class="link-block">
-                                    <a href="https://github.com/"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="bi bi-github"></i>
-                                        </span>
-                                        <span>Code (soon!)</span>
-                                    </a>
-                                </span>
-                                <!-- Dataset Link. -->
-                                <span class="link-block">
-                                    <a href="https://github.com/"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="bi bi-images"></i>
-                                        </span>
-                                        <span>Data (soon!)</span>
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <!--                            <span class="link-block">-->
+                  <!--                                <a href="" class="external-link button is-normal is-rounded is-dark">-->
+                  <!--                                  <span class="icon">-->
+                  <!--                                      <i class="fas fa-file-pdf"></i>-->
+                  <!--                                  </span>-->
+                  <!--                                  <span>Paper (tbd)</span>-->
+                  <!--                                </a>-->
+                  <!--                              </span>-->
+                  <span class="link-block">
+                    <a
+                      href="https://openaccess.thecvf.com/content/CVPR2023W/E2EAD/html/Naumann_Lanelet2_for_nuScenes_Enabling_Spatial_Semantic_Relationships_and_Diverse_Map-Based_CVPRW_2023_paper.html"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fa fa-file-lines"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code (soon!)</span>
+                    </a>
+                  </span>
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Data (soon!)</span>
+                    </a>
+                  </span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="section">
-        <div class="container is-max-desktop">
-            <!-- Abstract. -->
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <h2 class="title is-3">Abstract</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            Enabling autonomous driving has been a long-standing goal, since it may increase safety,
-                            efficiency and convenience. Motion prediction and planning are key components that need to
-                            be
-                            solved to reach this goal. Although high definition (HD) maps provide important contextual
-                            information for motion prediction and planning that constrains the action space of traffic
-                            participants, most approaches are not able to fully exploit this heterogeneous information.
-                        </p>
-                        <p>
-                            In
-                            this work, we enrich the existing road geometry of the popular nuScenes dataset and convert
-                            it
-                            into the open-source map framework Lanelet2. This allows easy access to the road topology
-                            and
-                            thus, enables the usage of (1) spatial semantic information, such as agents driving on
-                            intersecting roads and (2) map-generated anchor paths for target vehicles that can help to
-                            improve trajectory prediction performance. Further, we present DMAP, a simple, yet effective
-                            approach for diverse map-based anchor path generation and filtering. We show that combining
-                            our
-                            approach with ground truth velocity profile information yields high-quality motion
-                            prediction
-                            results on nuScenes (MinADE5=1.09, MissRate5,2=0.18, Offroad rate=0.00). While it is
-                            obviously
-                            unfair to compare our approach against the state-of-the-art, it shows that our HD map
-                            accurately
-                            depicts the road geometry and topology. Future approaches can leverage this by focusing on
-                            data-driven sampling of map-based anchor paths and estimating velocity profiles. All code
-                            and
-                            data is made publicly available at https://xxx.github.io/lanelet4nuscenes.
-                        </p>
-                    </div>
-                </div>
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Enabling autonomous driving has been a long-standing goal, since
+                it may increase safety, efficiency and convenience. Motion
+                prediction and planning are key components that need to be
+                solved to reach this goal. Although high definition (HD) maps
+                provide important contextual information for motion prediction
+                and planning that constrains the action space of traffic
+                participants, most approaches are not able to fully exploit this
+                heterogeneous information.
+              </p>
+              <p>
+                In this work, we enrich the existing road geometry of the
+                popular nuScenes dataset and convert it into the open-source map
+                framework Lanelet2. This allows easy access to the road topology
+                and thus, enables the usage of (1) spatial semantic information,
+                such as agents driving on intersecting roads and (2)
+                map-generated anchor paths for target vehicles that can help to
+                improve trajectory prediction performance. Further, we present
+                DMAP, a simple, yet effective approach for diverse map-based
+                anchor path generation and filtering. We show that combining our
+                approach with ground truth velocity profile information yields
+                high-quality motion prediction results on nuScenes
+                (MinADE5=1.09, MissRate5,2=0.18, Offroad rate=0.00). While it is
+                obviously unfair to compare our approach against the
+                state-of-the-art, it shows that our HD map accurately depicts
+                the road geometry and topology. Future approaches can leverage
+                this by focusing on data-driven sampling of map-based anchor
+                paths and estimating velocity profiles.
+              </p>
             </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
             <br />
-            <!--/ Abstract. -->
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <section class="section" id="BibTeX">
-                        <div class="container is-max-desktop content">
-                            <h3 class="title">BibTeX</h3>
-                            <pre style="text-align: left">
+            <br />
+            <br />
+            <h2 class="title is-3">
+              Diverse Map-based Anchor Path generation (DMAP)
+            </h2>
+            <div class="content has-text-justified">
+              <p>
+                By exploiting the information of the implicitly defined lane
+                connectivity graph of the Lanelet2 map, we present a simple, yet
+                effective algorithm called DMAP to generate a set of diverse
+                drivable anchor paths for a target vehicle, which can be readily
+                used for trajectory prediction and planning tasks. We show, that
+                when combined with the ground truth velocity profile, our
+                map-based anchor path generation approach yields high-quality
+                results for motion prediction on nuScenes. 
+              </p>
+            </div>
+
+            <section class="hero is-light is-small">
+              <div class="hero-body">
+                <div class="container" style="margin: 0 10%">
+                  <div
+                    id="results-carousel"
+                    class="carousel results-carousel multi-carousel"
+                  >
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/024985b672d844809ef6541d10d14b9d_8047cf4610644ecda5ec019b9fb99aca/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2a950ea53c2442eda597e15bdebc455f_ec74476d0b5a4cc4b97fd222ee7a91be/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/118e4765e54d49e19f2e09a004cafbb8_a1b4f3ebd2d8441cba221df2441301e2/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/2f4a11978055404cb430222d5a40f772_0876c65a8f9d48a8bad89e1b28f075f1/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/781f21a88226455dab609c816bc5883c_a3020e9594c04d8cbe448e06a0c699d1/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/b1d6863fbf2241eabfebd42cd193c4f3_74f37d96acd54917992d76cafc3e9944/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-progress"></div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/1.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">nuScenes map</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/2.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Target vehicle</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/3.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Lanelet matching</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/4.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">All possible anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/5.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">Filtered anchors</div>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <img
+                          src="static/images/examples/9b3ddcfa454348d2844a1ad2ed11ce6e_1566d46ee5db41b5b3239d71c45300bc/6.jpg"
+                        />
+                        <div class="item-caption-wrapper">
+                          <div class="item-caption">
+                            Ground truth trajectory
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of items -->
+                  </div>
+                  Visualization of lanelet mapping, anchor generation, and
+                  anchor filtering with DMAP
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <br />
+            <br />
+            <br />
+            <h2 class="title is-3">nuScenes to Lanelet2 map conversion</h2>
+            <div class="content has-text-justified">
+              <p>
+                We present an approach to enhance the HD road maps of the
+                popular nuScenes dataset. While the dataset already provides
+                detailed information on the geometry of the roads and their
+                surroundings, it is not straightforward to infer the full road
+                topology, since intersections are not modelled explicitly. We
+                bridge this gap by providing an approach to automatically
+                convert the nuScenes map to the popular automated driving format
+                Lanelet2, which enables convenient access to the full road
+                topology.
+              </p>
+            </div>
+            <p>
+              <img src="static/images/overview.png" width="80%" />
+              <br />
+              <span style="font-size: small">
+                <b>Figure</b>: We convert the nuScenes map (a) into the
+                open-source map format Lanelet2 (b) to enable easy access to the
+                full road geometry and topology in a hierarchical structure (c).
+              </span>
+              <br />
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <section class="section" id="BibTeX">
+              <div class="container is-max-desktop content">
+                <h2 class="title is-3">BibTeX</h2>
+                <pre style="text-align: left">
 <code>
-@InProceedings{Naumann_2023_CVPR,
+@InProceedings{naumannHertleinLanelet2NuScenes,
     author    = {Naumann, Alexander and Hertlein, Felix and Grimm, Daniel and Zipfl, Maximilian and Thoma, Steffen and Rettinger, Achim and Halilaj, Lavdim and Luettin, Juergen and Schmid, Stefan and Caesar, Holger},
     title     = {Lanelet2 for nuScenes: Enabling Spatial Semantic Relationships and Diverse Map-Based Anchor Paths},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
@@ -185,39 +673,43 @@
     pages     = {3247-3256}
 }
 </code>
-                            </pre>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="column is-centered"></div>
+                    </pre>
+              </div>
+            </section>
+          </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="content has-text-centered">
-                    <a class="icon-link" href="https://openaccess.thecvf.com/content/CVPR2023W/E2EAD/papers/Naumann_Lanelet2_for_nuScenes_Enabling_Spatial_Semantic_Relationships_and_Diverse_Map-Based_CVPRW_2023_paper.pdf" target="_blank" class="external-link"
-                        disabled>
-                        <i class="bi bi-file-text"></i>
-                    </a>
-                    <a class="icon-link" href="https://github.com/FelixHertlein/" target="_blank" class="external-link"
-                        disabled>
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
-                <div class="columns is-centered">
-                    <div class="column is-8">
-                        <div class="content">
-                            <p style="text-align: center">
-                                This website template is borrowed from
-                                <a href="https://github.com/nerfies/nerfies.github.io"
-                                    target="_blank">https://nerfies.github.io</a>
-                            </p>
-                            <p style="text-align: center">© Felix Hertlein and Alexander Naumann, 2023</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-</body>
+      </div>
+    </section>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a
+            class="icon-link"
+            href="https://openaccess.thecvf.com/content/CVPR2023W/E2EAD/html/Naumann_Lanelet2_for_nuScenes_Enabling_Spatial_Semantic_Relationships_and_Diverse_Map-Based_CVPRW_2023_paper.html"
+            class="external-link"
+            disabled
+          >
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="" class="external-link" disabled>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p style="text-align: center">
+                This website template is borrowed from
+                <a href="https://github.com/nerfies/nerfies.github.io"
+                  >https://nerfies.github.io</a
+                >
+              </p>
+              <p style="text-align: center">© Felix Hertlein, 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
